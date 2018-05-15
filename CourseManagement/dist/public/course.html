@@ -81,12 +81,12 @@
 
         <br>
 
-        <div class="container" id="addTea">
-                <h4>Add Teacher</h4>
-                <label for="name">Teacher Name</label>
-                <input type="text" id="name" name="name" placeholder="Teacher name.." v-model='name'>
+        <div class="container" id="addCor">
+                <h4>Add Course</h4>
+                <label for="name">Course Name</label>
+                <input type="text" id="name" name="name" placeholder="Course name.." v-model='name'>
                 
-                <input type="submit" value="Submit" v-on:click="addTeacher" >
+                <input type="submit" value="Submit" v-on:click="addCourse" >
 
                 <br>
 
@@ -94,16 +94,16 @@
                     <thead>
                       <tr>
                         <th scope="col">#</th>
-                        <th scope="col">Teacher Name</th>
+                        <th scope="col">Course Name</th>
                         <!-- <th scope="col">Handle</th> -->
                       </tr>
                     </thead>
 
                     <tbody>
-                        <tr v-for="(teacher,index) in teachers">
-                            <th scope="row"> {index+1} </th>
+                        <tr v-for="(course,index) in courses">
+                            <th scope="row"> {{index+1}} </th>
                             <td>
-                                {{teacher.name}}
+                                {{course.name}}
                             </td>
                             <!-- <td>
                                 <input type="submit" v-bind:name = "subject.name" v-bind:id = "subject.id" value="Details" v-on:click="stuDetail" >
@@ -116,7 +116,7 @@
         </div>
 
         
-        <script src="vues/teacherVue.js"></script>
+        <script src="vues/courseVue.js"></script>
 
 </body>
 

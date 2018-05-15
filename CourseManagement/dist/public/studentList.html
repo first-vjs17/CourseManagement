@@ -71,6 +71,9 @@
                         <li class="nav-item ">
                                 <a class="nav-link" href="/teacher.html">Teachers</a>
                         </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="/course.html">Courses</a>
+                        </li>
                     </ul>
                 </nav>
 
@@ -145,8 +148,8 @@
                     </thead>
 
                     <tbody>
-                        <tr v-for="student in students">
-                            <th scope="row">1</th>
+                        <tr v-for="(student,index) in students">
+                            <th scope="row"> {{index+1}} </th>
                             <td>
                                 {{student.name}}
                             </td>
